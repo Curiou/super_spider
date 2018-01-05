@@ -1,0 +1,13 @@
+git_shanlin爬虫需要支持：
+0. antiBlockUtil, parseUtil, resultUtil
+1. antiBlock configuration
+2. antiBlock Strategy
+        CFG_HTTP_ENCODING:编码格式：gbk，utf-8
+        CFG_DOWN_MAXPAGENUM:最大的页数
+        CFG_DOWN_INDEX:索引需要统一设计，多级，便于存储检索,如 www.github.com/search改为www_github_com/search
+
+3. HourlySaveLocalHandler存储规范格式
+自己定义一个类继承HourlySaveLocalHandler。重写preProcess方法就好了
+
+URLManager的使用
+通常你需要从URLManager继承一个类，提供

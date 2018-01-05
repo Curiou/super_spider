@@ -1,0 +1,17 @@
+spiderx框架模版应用
+根据开发文档 ...\superbase\doc\usage 说
+在终端上调试用下命令
+python spider/sample/sample.py "env=DEV"  failTest hello world
+1.python 运行python的版本
+2.spider/sample/sample.py 运行路径
+3."env=DEV" 开发环境，目前有三种环境，DEV（开发），TEST（测试），ONLINE（生产）...\spiderx\common\baseCrawler.py这是在基类里写的
+4.failTest 写有爬虫规则的函数
+5.hello world 给调用的函数传的参
+    4（1）.基本的爬虫
+        1.写__init__方法 初始化参数：在baseCrawler.py有参数说明
+        2.用BaseCrawler.__init__(self, params, myCfg)继承父类方法，继承有三种方法的
+        3.编写爬虫规则 用pyquery的css方法，...\spiderx\common\utility\parseUtil.py,也可以自己编写规则，用自己熟练的规则，如：xpath
+        4.调用BaseCrawler的downOneDetail下载页面解析，需要，ur，爬虫规则，保存结果头参数
+        5.调用self.jobDone()判断是否下载完成
+
+
